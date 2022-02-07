@@ -95,7 +95,7 @@ with st.container():
     st.write("---")
     st.title("Athlete Events Dataset🏃🚴‍♂️")
     st.write("1st Data frame")    
-    dfa = pd.read_csv('athlete_events.csv')
+    dfa = pd.read_excel('athlete_events.xlsx')
     dfa
 with st.container():
     st.write(       )
