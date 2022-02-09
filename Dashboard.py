@@ -25,7 +25,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score
-import openpyxl as xl
+import openpyxl
 
 img =st.container()
 header = st.container()
@@ -71,7 +71,7 @@ st.write("""
 
 #_____________________________________________________________________________________________________________________
 #Upload Row Dataset
-rw_dataset = xl.load_workbook("ath_data.xlsx")
+rw_dataset = pd.read_excel("ath_data.xlsx")
 #_____________________________________________________________________________________________________________________
 
 # fig, ax = plt.subplots(figsize=(5, 5))
@@ -93,7 +93,7 @@ st.pyplot(fig)
 
 #________________________________________________________________________________________________________________
 #Upload Clean Dataset......
-dfn = xl.load_workbook("clnRowDT.xlsx")
+dfn = pd.read_excel("clnRowDT.xlsx")
 #________________________________________________________________________________________________________________
 
 st.write('Male and Female Who won medal')
