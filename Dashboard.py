@@ -52,7 +52,7 @@ athlete_info = st.selectbox(
 with dataset:
     def show_data(athlete_info):
         if athlete_info == "Athlete_Info":
-            d_set = st.dataframe(pd.read_csv("athlete_events.xlsx"))
+            d_set = st.dataframe(pd.read_excel("athlete_events.xlsx"))
         elif athlete_info == "Region":
             d_set = st.dataframe(pd.read_csv("noc_regions.csv"))    
         else:
@@ -70,7 +70,7 @@ st.write("""
 
 #_____________________________________________________________________________________________________________________
 #Upload Row Dataset
-rw_dataset = pd.read_csv("ath_data.xlsx")
+rw_dataset = pd.read_excel("ath_data.xlsx")
 #_____________________________________________________________________________________________________________________
 
 # fig, ax = plt.subplots(figsize=(5, 5))
@@ -92,7 +92,7 @@ st.pyplot(fig)
 
 #________________________________________________________________________________________________________________
 #Upload Clean Dataset......
-dfn = pd.read_csv("clnRowDT.xlsx")
+dfn = pd.read_excel("clnRowDT.xlsx")
 #________________________________________________________________________________________________________________
 
 st.write('Male and Female Who won medal')
