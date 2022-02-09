@@ -412,33 +412,4 @@ sns.barplot(c, c.index, palette = 'rocket')
 
 plt.tight_layout()
 st.pyplot(fig)
-
-
-
-
-
-
-
-
-# distribute = st.selectbox(
-#     "Data Visualization",
-#     ("Name", "Gender", "Year", "Region", "Season", "Sport","Medal", "Age & Height")
-# )
-
-classifier = st.selectbox(
-    "Select Classifier",
-    ("Logistic Regression", "SVM", "KNN", "Decision Tree", "Naive Bayes", "XGBoost", "GBC")
-)
-
-
-def add_parameter_ui(clf_name):
-    params = dict()
-    if clf_name == "KNN":
-        K = st.sidebar.slider("K",1,15)
-        params["K"] = K
-    elif clf_name == "SVM":
-        C = st.sidebar.slider("C", 0.01, 10.0)
-        params["C"] = C
-    return params
-
-add_parameter_ui(classifier)
+st.write("""### Thank You....###""")
