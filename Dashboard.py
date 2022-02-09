@@ -52,7 +52,7 @@ athlete_info = st.selectbox(
 with dataset:
     def show_data(athlete_info):
         if athlete_info == "Athlete_Info":
-            d_set = st.dataframe(pd.read_csv("athlete_events.csv"))
+            d_set = st.dataframe(pd.read_csv("athlete_events.xlsx"))
         elif athlete_info == "Region":
             d_set = st.dataframe(pd.read_csv("noc_regions.csv"))    
         else:
