@@ -334,7 +334,16 @@ sns.barplot(x = participants2, y = participants2.index, palette="icefire")
 plt.title("How many times Won Medals in Olympics")
 st.pyplot(fig)
 
+# Map Visualize 
+map_noc_regions = pd.read_csv('noc_regions.csv')
+df = pd.read_excel('athlete_events.xlsx')
+map_plot_df = df.merge(map_noc_regions,on='NOC', how='left')
 
+figure = px.choropleth(map_plot_df,locations='Team',locationmode='country names',color='Sex',animation_frame='Year',)
+figure.update_layout(title='choropleth map of olympics worldwide',template='plotly_dark')
+palette = brewer['YlGnBu'][8]
+color_mapper = LinearColorMapper(palette = palette, low = 0, high = 40, nan_color = '#d9d9d9')
+figure.show()
 
 
 
