@@ -8,3 +8,4 @@ streamlit-lottie==0.0.3
 plotly==5.5.0
 openpyxl==3.0.9
 xgboost==1.5.2
+bokeh==2.1.1
