@@ -335,6 +335,11 @@ plt.title("How many times Won Medals in Olympics")
 st.pyplot(fig)
 
 # Map Visualize 
+from bokeh.io import output_notebook, show, output_file
+from bokeh.plotting import figure
+from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar
+from bokeh.palettes import brewer
+
 map_noc_regions = pd.read_csv('noc_regions.csv')
 df = pd.read_excel('athlete_events.xlsx')
 map_plot_df = df.merge(map_noc_regions,on='NOC', how='left')
