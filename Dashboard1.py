@@ -26,6 +26,7 @@ from sklearn.metrics import roc_auc_score, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score
 import os
+from streamlit_lottie import st_lottie
 
 img =st.container()
 header = st.container()
@@ -34,9 +35,18 @@ features = st.container()
 model_training = st.container()
 
 with img:
-    image = Image.open('ol_img.jpg')
-    st.image(image, caption='wallpapercave.com')
+    #image = Image.open('ol_img.jpg')
+    #st.image(image, caption='wallpapercave.com')
+    #lottie image
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
+    lottie_olympics = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_0rigkcku.json")
+    st_lottie(lottie_graph, height=300, key="olympics")
+#lottie image
 with header:
     st.title('120 years of Olympic history: athletes and results!')
 
