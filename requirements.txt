@@ -10,3 +10,4 @@ openpyxl==3.0.9
 xgboost==1.5.2
 bokeh==2.1.1
 streamlit-lottie==0.0.3
+requests==2.26.0
