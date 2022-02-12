@@ -39,7 +39,7 @@ with img:
     #image = Image.open('ol_img.jpg')
     #st.image(image, caption='wallpapercave.com')
     #lottie image
-def load_lottieurl(url):
+    load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
         return None
