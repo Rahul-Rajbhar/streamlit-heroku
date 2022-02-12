@@ -38,11 +38,11 @@ with img:
     #image = Image.open('ol_img.jpg')
     #st.image(image, caption='wallpapercave.com')
     #lottie image
-#def load_lottieurl(url):
-#   r = requests.get(url)
-   # if r.status_code != 200:
-     #   return None
-    #return r.json()
+     load_lottieurl(url):
+     r = requests.get(url)
+     if r.status_code != 200:
+          return None
+     return r.json()
 
     lottie_olympics = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_0rigkcku.json")
     st_lottie(lottie_olympics, height=300, key="olympics")
